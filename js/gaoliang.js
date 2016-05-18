@@ -1,4 +1,5 @@
-
+// @author 多肉哥
+// @addtime 2016/05/18
 // 没有加载jquery自动加载bootcss的jquery cdn
 ! window.jQuery && document.write("<scri"+"pt src='//cdn.bootcss.com/jquery/2.2.3/jquery.min.js' type='text/javascript'></s"+"cript>");
 
@@ -8,7 +9,7 @@
 function showSearch(){
 	this.run = function()
 	{
-		var searchInputName = $('.searchInput').attr('name'),searchInputValue= GetQueryString( searchInputName );
+		var searchInputName = $('.searchInput').attr('name'),searchInputValue= this.GetQueryString( searchInputName );
 		$('.searchContent').each( function(){
 			var t = decodeURIComponent($(this).html());
 			var r = t.replace( searchInputValue, "<b style='color:#F44336'>"+searchInputValue+"</b>");
